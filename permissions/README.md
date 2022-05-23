@@ -18,3 +18,4 @@ chmod --reference=olleh hello script copies hello file permissions to file olleh
 chmod -R +X . script adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.
 mkdir -m 751 my_dir script creates a directory called my_dir with permissions 751 in the working directory
 chgrp school hello script changes the group owner to school for the file hello
+chown vincent:staff * script changes the owner to vincent and the group owner to staff for all the files and directories in the working directory
