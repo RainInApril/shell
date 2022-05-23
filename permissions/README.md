@@ -14,5 +14,5 @@ chmod 753 hello script sets the mode of the file hello to this:
 -rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
 The file hello will be in the working directory
 You are not allowed to use commas for this script
-
 chmod --reference=olleh hello script copies hello file permissions to file olleh
+chmod a+X * scipt adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.
