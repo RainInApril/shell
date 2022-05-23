@@ -22,3 +22,4 @@ chown vincent:staff * script changes the owner to vincent and the group owner to
 chown -h vincent:staff _hello script changes the owner and the group owner of _hello to vincent and staff respectively
 The file _hello is in the working directory
 The file _hello is a symbolic link
+chown --from=guillaume vincent hello script changes the owner of the file hello to vincent only if it is owned by the user guillaume
