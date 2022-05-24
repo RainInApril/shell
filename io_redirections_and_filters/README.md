@@ -27,4 +27,4 @@ grep -v bin /etc/passwd script display all the lines in the file /etc/passwd tha
 grep ^[[:alpha:]] /etc/ssh/sshd_config script display all lines of the file /etc/ssh/sshd_config starting with a letter.
 Include capital letters as well.
 tr 'A' 'Z' | tr 'c' 'e' script replace all characters A and c from input to Z and e respectively.
-tr -d c C script removes all letters c and C from input.
+tr -d c | tr -d C script removes all letters c and C from input.
