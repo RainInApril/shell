@@ -20,3 +20,4 @@ sort | uniq -u script takes a list of words as input and prints only words that 
 Input format: One line, one word
 Output format: One line, one word
 Words should be sorted
+grep root /etc/passwd script displays lines containing the pattern “root” from the file /etc/passwd
