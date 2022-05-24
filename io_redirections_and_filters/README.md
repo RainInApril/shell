@@ -19,8 +19,10 @@ Sorted from the newest to the oldest
 sort | uniq -u script takes a list of words as input and prints only words that appear exactly once.
 Input format: One line, one word
 Output format: One line, one word
-Words should be sorted
+Words should be sorteod
 grep root /etc/passwd script displays lines containing the pattern “root” from the file /etc/passwd
 grep -c bin /etc/passwd script display the number of lines that contain the pattern “bin” in the file /etc/passwd
 grep -A 3 root /etc/passwd script display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
 grep -v bin /etc/passwd script display all the lines in the file /etc/passwd that do not contain the pattern “bin”
+grep ^[[:alpha:]] /etc/ssh/sshd_config script display all lines of the file /etc/ssh/sshd_config starting with a letter.
+Include capital letters as well.
