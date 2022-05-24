@@ -29,5 +29,5 @@ Include capital letters as well.
 tr 'A' 'Z' | tr 'c' 'e' script replace all characters A and c from input to Z and e respectively.
 tr -d c | tr -d C script removes all letters c and C from input.
 rev script reverse its input.
-sort /etc/passwd | cut -d: -f6 script displays all users and their home directories, sorted by users.
+sort /etc/passwd | cut -d: -f1,6 script displays all users and their home directories, sorted by users.
 Based on the the /etc/passwd file.
