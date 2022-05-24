@@ -22,3 +22,4 @@ Output format: One line, one word
 Words should be sorted
 grep root /etc/passwd script displays lines containing the pattern “root” from the file /etc/passwd
 grep -c bin /etc/passwd script display the number of lines that contain the pattern “bin” in the file /etc/passwd
+grep -A 3 root /etc/passwd script display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
