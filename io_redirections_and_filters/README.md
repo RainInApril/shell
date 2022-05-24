@@ -28,3 +28,4 @@ grep ^[[:alpha:]] /etc/ssh/sshd_config script display all lines of the file /etc
 Include capital letters as well.
 tr 'A' 'Z' | tr 'c' 'e' script replace all characters A and c from input to Z and e respectively.
 tr -d c | tr -d C script removes all letters c and C from input.
+rev script reverse its input.
