@@ -31,3 +31,10 @@ tr -d c | tr -d C script removes all letters c and C from input.
 rev script reverse its input.
 cut -d : -f1,6 /etc/passwd | sort script displays all users and their home directories, sorted by users.
 Based on the the /etc/passwd file.
+find . -empty -printf "%f\n" script finds all empty files and directories in the current directory and all sub-directories.
+
+Only the names of the files and directories should be displayed (not the entire path)
+Hidden files should be listed
+One file name per line
+The listing should end with a new line
+You are not allowed to use basename, grep, egrep, fgrep or rgrep
