@@ -32,3 +32,4 @@ The number will be stored in the environment variable NUM.
 printf "%x\n" $DECIMAL script converts a number from base 10 to base 16.
 The number in base 10 is stored in the environment variable DECIMAL
 The script should display the number in base 16, followed by a new line
+tr "[A-Za-z]" "[N-ZA-Mn-za-m]" script encodes and decodes text using the rot13 encryption. Assume ASCII.
