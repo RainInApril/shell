@@ -38,7 +38,7 @@ Hidden files should be listed
 One file name per line
 The listing should end with a new line
 You are not allowed to use basename, grep, egrep, fgrep or rgrep
-find . -type f -name "*.gif" | rev | cut -d "/" -f 1 | rev | sort -du script that lists all the files with a .gif extension in the current directory and all its sub-directories.
+find . -type f -name "*.gif" -printf "%f\n" | rev | cut -d "." -f 2- | rev | LC_ALL=C sort -f script lists all the files with a .gif extension in the current directory and all its sub-directories.
 Hidden files should be listed
 Only regular files (not directories) should be listed
 The names of the files should be displayed without their extensions
@@ -46,3 +46,6 @@ The files should be sorted by byte values, but case-insensitive (file aaa should
 One file name per line
 The listing should end with a new line
 You are not allowed to use basename, grep, egrep, fgrep or rgrep
+echo $(cut -c 1 | tr -d "\n") script decodes acrostics that use the first letter of each line.
+The ‘decoded’ message has to end with a new line
+You are not allowed to use grep, egrep, fgrep or rgrep
