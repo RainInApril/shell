@@ -9,3 +9,6 @@ set script lists all local variables and environment variables, and functions.
 BEST="School" script  creates a new local variable.
 Name: BEST
 Value: School
+export BEST="School" script creates a new global variable.
+Name: BEST
+Value: School
