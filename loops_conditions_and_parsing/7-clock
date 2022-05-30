@@ -7,10 +7,11 @@ while [[ "$h" -le 12 ]]
 do
 	echo "Hour: $h"
 	(( h++ ))
-done
-m=1
-while [[ "$m" -le 59 ]]
-do
-	echo "$m"
-	(( m++ ))
+	
+	m=1
+	while [[ "$m" -le 59 ]]
+	do
+		echo "$m"
+		(( m++ ))
+	done
 done
