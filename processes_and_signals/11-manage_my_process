@@ -16,7 +16,7 @@
 #+ Creates a file containing its PID in /var/run/my_process.pid
 #+ Displays manage_my_process restarted
 #+ Displays Usage: manage_my_process {start|stop|restart} if any other argument or no argument is passed
-case $1 in
+case "$1" in
 	start)
 		./manage_my_process &
 		echo "$!" > /var/run/my_process.pid
@@ -24,12 +24,12 @@ case $1 in
 		;;
 	stop)
 		pkill -f ./manage_my_process
-		sudo rm -f /var/run/my_process.pid
+		rm -f /var/run/my_process.pid
 		echo "manage_my_process stopped"
 		;;
 	restart)
 		pkill -f ./manage_my_process
-		sudo rm -f /var/run/my_process.pid
+		rm -f /var/run/my_process.pid
 		./manage_my_process &
 		echo "$!" > /var/run/my_process.pid
 		echo "manage_my_process restarted"
