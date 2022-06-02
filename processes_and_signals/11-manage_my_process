@@ -16,25 +16,35 @@
 #+ Creates a file containing its PID in /var/run/my_process.pid
 #+ Displays manage_my_process restarted
 #+ Displays Usage: manage_my_process {start|stop|restart} if any other argument or no argument is passed
+. /lib/lsb/init-functions
+
+PID=/var/run/my_process.pid
+
+start() {
+	./manage_my_process &
+	echo "$!" > $PID
+}
+stop() {
+	pkill -f ./manage_my_process && $PID
+}
+
 case $1 in
 	start)
-		./manage_my_process &
-		echo "$!" > /var/run/my_process.pid
+		start
 		echo "manage_my_process started"
 		;;
 	stop)
-		pkill -f ./manage_my_process
-		rm -f /var/run/my_process.pid
+		stop
 		echo "manage_my_process stopped"
 		;;
 	restart)
-		pkill -f ./manage_my_process
-		rm -f /var/run/my_process.pid
-		./manage_my_process &
-		echo "$!" > /var/run/my_process.pid
+		stop
+		start
 		echo "manage_my_process restarted"
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"
 		;;
 esac
+
+exit o 
